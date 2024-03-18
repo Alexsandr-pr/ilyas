@@ -1,0 +1,52 @@
+hero
+about
+first
+second
+third
+
+<!-- 4 -->@@include('html/1_page-welcom/_04-second.htm',{})
+<!-- 5 -->@@include('html/1_page-welcom/_05-third.htm',{})
+
+@@include('html/_footer.htm',{})
+
+
+==============================================
+1============
+<!-- <div class="porfolio__layer porfolio__layer--1"  data-prlx data-coefficient="0"
+				data-direction="1" style="background-image: url(img/port-1/first-bg.webp);"></div> -->
+
+<!-- <div class="porfolio__layer porfolio__layer--2"  data-prlx data-coefficient="200"
+				data-direction="1" style="background-image: url(img/port-1/first-3.webp);"></div> -->
+
+	<!-- <div class="porfolio__layer porfolio__layer--3"  data-prlx data-coefficient="170"
+				data-direction="1" style="background-image: url(img/port-1/first-2.webp);"></div> -->
+
+<!-- <div class="porfolio__layer porfolio__layer--4"  data-prlx data-coefficient="90"
+		data-direction="1" style="background-image: url(img/port-1/first-1.webp);"></div> -->
+
+2===========================
+<!-- <div class="porfolio__layer" data-prlx data-coefficient="0" data-direction="1" 
+					style="background-image: url(img/port-2/second-bg.webp);"></div> -->
+
+<!-- <div class="porfolio__layer" data-prlx data-coefficient="200" data-direction="1" 
+					style="background-image: url(img/port-2/second-2.webp);"></div> -->
+
+<!-- <div class="porfolio__layer" data-prlx data-coefficient="140" data-direction="-1"
+					style="background-image: url(img/port-2/second-1.webp);"></div> -->
+
+3======================
+<!-- <div class="porfolio__layer" data-prlx data-coefficient="0" data-direction="1"
+					style="background-image: url(img/port-3/three-bg.webp);"></div> -->
+
+<!-- <div class="porfolio__layer" data-prlx data-coefficient="180" data-direction="-1"
+					style="background-image: url(img/port-3/three-2.webp);"></div> -->
+
+<!-- <div class="porfolio__layer" data-prlx data-coefficient="30" data-direction="-1"
+					style="background-image: url(img/port-3/three-1.webp);"></div> -->
+
+
+
+
+
+
+

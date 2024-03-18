@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<!-- <Вставка helper> — Блок ОТКРЫТ:↓▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬↓-->
+			<!--* Вставляем подключение с helper/helper.html [Сниппет: inc+] -->
+			<!-- <Вставка helper> — Блок ОТКРЫТ:↓▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬↓-->
+			<!-- 1 -->@@include('html/1_page-welcom/_01-hero.htm',{})
+			<!-- 2 -->@@include('html/1_page-welcom/_02-about.htm',{})
+			<!-- 3 -->@@include('html/1_page-welcom/_03-first.htm',{})
+			<!--</Вставка helper> — Блок ЗАКРЫТ:↑———————————————————————————————↑-->
+			<!--</Вставка helper> — Блок ЗАКРЫТ:↑———————————————————————————————↑-->
+		</main>
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+</html>

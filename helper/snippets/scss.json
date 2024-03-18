@@ -1,0 +1,200 @@
+{
+	// Place your snippets for css here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	// ССЫЛКА в генератор - https://snippet-generator.app
+	//____________________________________________________________________________________________________//
+	//?																						Обнуление
+	"Обнуление сss": {
+		"scope": "css, scss",
+		"prefix": "zero+",
+		"body": [
+			"/*Обнуление*/",
+			"*{padding: 0;margin: 0;border: 0;}",
+			"*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}",
+			":focus,:active{outline: none;}",
+			"a:focus,a:active{outline: none;}",
+			"nav,footer,header,aside{display: block;}",
+			"html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}",
+			"input,button,textarea{font-family:inherit;}",
+			"input::-ms-clear{display: none;}",
+			"button{cursor: pointer;}",
+			"button::-moz-focus-inner {padding:0;border:0;}",
+			"a,a:visited{text-decoration: none;}",
+			"a:hover{text-decoration: none;}",
+			"ul li{list-style: none;}",
+			"img{vertical-align: top;}",
+			"h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}",
+			"/*--------------------*/"
+			// ССЫЛКА в генератор - https://snippet-generator.app/ 
+		],
+		"description": "My zero"
+	},
+	//____________________________________________________________________________________________________//
+	//?																						Бэкграунды
+	"Универсальный Бэкграунд": {
+		"prefix": "bg+",
+		"body": [
+			"background: url('../img/$1') 50%$2 / cover$3 no-repeat$4;"
+		],
+		"description": "Бэкграунд-ссылка на фото-позиция-ноуРепит"
+	},
+	//____________________________________________________________________________________________________//
+	//?																						МЭРДЖИН
+	//Мэрджин TOP
+	"Margin top": {
+		"prefix": "mt+",
+		"body": [
+			"margin: $1px 0px 0px 0px;$2"
+		],
+		"description": "Мэрджин верх"
+	},
+	//Мэрджин RIGHT
+	"Margin right": {
+		"prefix": "mr+",
+		"body": [
+			"margin: 0px $1px 0px 0px;$2"
+		],
+		"description": "Мэрджин право"
+	},
+	//Мэрджин BOTTOM
+	"Margin buttom": {
+		"prefix": "mb+",
+		"body": [
+			"margin: 0px 0px $1px 0px;$2"
+		],
+		"description": "Мэрджин низ"
+	},
+	//Мэрджин LEFT
+	"Margin left": {
+		"prefix": "ml+",
+		"body": [
+			"margin: 0px 0px 0px $1px;$2"
+		],
+		"description": "Мэрджин лево"
+	},
+	//____________________________________________________________________________________________________//
+	//?																						Пэддинг
+	//Пэддинг TOP
+	"padding top": {
+		"prefix": "pt+",
+		"body": [
+			"padding: $1px 0px 0px 0px;$2"
+		],
+		"description": "Пэддинг верх"
+	},
+	//Пэддинг RIGHT
+	"padding right": {
+		"prefix": "pr+",
+		"body": [
+			"padding: 0px $1px 0px 0px;$2"
+		],
+		"description": "Пэддинг право"
+	},
+	//Пэддинг BOTTOM
+	"padding buttom": {
+		"prefix": "pb+",
+		"body": [
+			"padding: 0px 0px $1px 0px;$2"
+		],
+		"description": "Пэддинг низ"
+	},
+	//Пэддинг LEFT
+	"padding left": {
+		"prefix": "pl+",
+		"body": [
+			"padding:0px 0px 0px $1px;$2"
+		],
+		"description": "Пэддинг лево"
+	},
+	//____________________________________________________________________________________________________//
+	//?																								Бордер
+	"border classic": {
+		"prefix": "br+",
+		"body": [
+			"border: 1px solid #000$1;"
+		],
+		"description": "Бордер классический"
+	},
+	//____________________________________________________________________________________________________//
+	//?																						Релэйтив позишэн
+	"Position relative": {
+		"prefix": "psr+",
+		"body": [
+			"position: relative;",
+			"top: 0$1px;",
+			"left: 0$2px;",
+			"width: 100$3%;",
+			"height: 100$4%;",
+			"z-index: 2$5;",
+		],
+		"description": "Позиция со всеми свойствами"
+	},
+	//____________________________________________________________________________________________________//
+	//?																						Фиксед позишэн
+	"Position Fixed": {
+		"prefix": "prf+",
+		"body": [
+			"position: fixed;",
+			"top: 0$1px;",
+			"left: 0$2px;",
+			"width: 100$3%;",
+			"height: 100$4%;",
+			"z-index: 2$5;",
+		],
+		"description": "Фиксированная позиция"
+	},
+	//____________________________________________________________________________________________________//
+	//?																						Абсолют позишэн
+	"Position absolute": {
+		"prefix": "psa+",
+		"body": [
+			"position: absolute;",
+			"top: 0$1px;",
+			"left: 0$2px;",
+			"width: 100$3%;",
+			"height: 100$4%;",
+			"z-index: 2$5;",
+		],
+		"description": "абсолютная позиция"
+	},
+	//____________________________________________________________________________________________________//
+	//?																						Импорт SCSS файлов
+	"Импорт в SCSS": {
+		"prefix": "imp",
+		"body": [
+			"@import \"$1\"; "
+		],
+		"description": "Импортация файлов в SCSS"
+	},
+	//____________________________________________________________________________________________________//
+	//?																						Медиа Запросы
+	"Универсальный медиа-запрос": {
+		"prefix": "md+",
+		"body": [
+			"@media (max-width:$1px){",
+			"}",
+		],
+		"description": "Бэкграунд-ссылка на фото-позиция-ноуРепит"
+	},
+	//____________________________________________________________________________________________________//
+	//?																						Разделитель
+	"Горизантальная линия scss": {
+		"prefix": "hr+",
+		"body": [
+			"// $1 - ОТКРЫТ>↓▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬↓",
+		],
+		"description": "Разделительная линия в SCSS"
+	},
+	//____________________________________________________________________________________________________//
+}

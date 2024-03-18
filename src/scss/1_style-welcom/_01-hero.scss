@@ -1,0 +1,63 @@
+//=============================================
+.hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	position: relative;
+	// .hero__container
+	&__container {
+		
+	}
+	// .hero__titles
+	&__titles {
+		position: relative;
+		z-index: 1;
+		transform: translate3d(0, calc(var(--scrollTopSection1) / 2), 0);
+		will-change: transform;
+		text-align: center;
+		color: black;
+		font-weight: 900;
+		text-transform: uppercase;
+
+		margin-top: calc(var(--index) * 4);
+		.titles {
+			// .titles__titles
+			&__titles {
+				color: rgb(228, 97, 97);
+
+				font-size: calc(var(--index) * 7);
+				letter-spacing: calc(var(--index) / 29.25);
+			}
+			// .titles__subtitle
+			&__subtitle {
+				font-size: calc(var(--index) * 4);
+				letter-spacing: calc(var(--index) / 29.25);
+				margin-top: calc(var(--index) * 1.7);
+				color: rgb(73, 79, 118);
+			}
+		}
+	}
+	// .hero__layers
+	&__layers {
+		// .hero__layers--background
+		&--background {
+			transform: translate3d(0, calc(var(--scrollTopSection1) / 1.5), 0);
+			z-index: 0;
+		}
+		// .hero__layers--base
+		&--base {
+			transform: translate3d(0, calc(var(--scrollTopSection1) / 2.5), 0);
+		}
+		// .hero__layers--middle
+		&--middle {
+			transform: translate3d(0, calc(var(--scrollTopSection1) / 15), 0);
+		}
+		// .hero__layers--front
+		&--front {
+			transform: translate3d(0, calc(var(--scrollTopSection1) / 6), 0);
+		}
+	}
+}
+
+//=============================================

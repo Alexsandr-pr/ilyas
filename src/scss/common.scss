@@ -1,0 +1,51 @@
+// Заголовки, общие БЄМ блоки и проче...
+:root {
+	--index: calc(1vw + 1vh);
+}
+.page {
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 260px;
+		bottom: -120px;
+		left: 0%;
+		z-index: 100;
+		background: url("@img/2-about/inline.webp") center / cover no-repeat;
+	}
+	// .page__hero
+	&__hero {
+		position: relative;
+		height: 100vh;
+	}
+	// .page__about
+	&__about {
+		min-height: 100vh;
+	}
+	// .page__first
+	&__first {
+		height: 100vh;
+	}
+}
+
+.layer {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+	z-index: 2;
+	will-change: transform;
+	// .layer__background
+	&__background {
+	}
+	// .layer__base
+	&__base {
+	}
+	// .layer__middle
+	&__middle {
+	}
+	// .layer__front
+	&__front {
+	}
+}

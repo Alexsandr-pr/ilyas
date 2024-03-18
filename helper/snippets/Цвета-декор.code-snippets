@@ -1,0 +1,125 @@
+{
+	// Place your GLOBAL snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	//Треуголки========================================
+	"art": {
+		"scope": "scss,css",
+		"prefix": "art",
+		"body": [
+			"width: 0;height: 0;border-left: 50px solid transparent;border-right: 50px solid transparent;border-bottom: 100px solid red;"
+		],
+		"description": "art"
+	},
+	//================================================
+	"arb": {
+		"scope": "scss,css",
+		"prefix": "arb",
+		"body": [
+			"width: 0;height: 0;border-left: 50px solid transparent;border-right: 50px solid transparent;border-top: 100px solid red;"
+		],
+		"description": "arb"
+	},
+	//================================================
+	"arl": {
+		"scope": "scss,css",
+		"prefix": "arl",
+		"body": [
+			"width: 0;height: 0;border-top: 50px solid transparent;border-right: 100px solid red;border-bottom: 50px solid transparent;"
+		],
+		"description": "arl"
+	},
+	//================================================
+	"arr": {
+		"scope": "scss,css",
+		"prefix": "arr",
+		"body": [
+			"width: 0;height: 0;border-top: 50px solid transparent;border-left: 100px solid red;border-bottom: 50px solid transparent;"
+		],
+		"description": "arr"
+	},
+	//Цвета============================================
+	"c0": {
+		"scope": "scss,css",
+		"prefix": "c0",
+		"body": [
+			"color:#000;"
+		],
+		"description": "c0"
+	},
+	//================================================
+	"color": {
+		"scope": "scss,css",
+		"prefix": "c",
+		"body": [
+			"color: #${1:fff};"
+		],
+		"description": "color"
+	},
+	//================================================
+	"c1": {
+		"scope": "scss,css",
+		"prefix": "c1",
+		"body": [
+			"color: #fff;"
+		],
+		"description": "c1"
+	},
+	//================================================
+	"vc1": {
+		"scope": "scss,css",
+		"prefix": "vc1",
+		"body": "color: #794f45;",
+		"description": "vc1"
+	},
+	//================================================
+	"vc2": {
+		"scope": "scss,css",
+		"prefix": "vc2",
+		"body": "color: #77608d;",
+		"description": "vc2"
+	},
+	//================================================
+	"vc3": {
+		"scope": "scss,css",
+		"prefix": "vc3",
+		"body": "color: #7A956B;",
+		"description": "vc3"
+	},
+	//================================================
+	"bc1": {
+		"scope": "scss,css",
+		"prefix": "bc1",
+		"body": "background-color: #794f45;",
+		"description": "bc1"
+	},
+	//================================================
+	"bc2": {
+		"scope": "scss,css",
+		"prefix": "bc2",
+		"body": "background-color: #77608d;",
+		"description": "bc2"
+	},
+	//================================================
+	"bc3": {
+		"scope": "scss,css",
+		"prefix": "bc3",
+		"body": "background-color: #7A956B;",
+		"description": "bc3"
+	},
+	//================================================
+}

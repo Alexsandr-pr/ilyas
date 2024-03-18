@@ -1,0 +1,368 @@
+{
+	// Place your GLOBAL snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	
+	"Add cection": {
+		"scope": "html",
+		"prefix": "sc+",
+		"body": "<section class=\"page__${1:name} ${1:name}\">\n\t<div class=\"${1:name}__container\">\n\t$2\n\t</div>\n</section>",
+		"description": "Додає обмежуючий контейнер"
+	},
+	//================================================
+	"импорт htm файлов": {
+		"scope": "html",
+		"prefix": "inc+",
+		"description": "Подключение импорта всех htm секций",
+		"body": [
+		  "<!-- <Вставка helper> — Блок ОТКРЫТ:↓▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬↓-->",
+		  "<!-- 1 -->@@include('html${1:номер-папки}',{})",
+		  "<!-- 2 -->@@include('html${2:номер-папки}',{})",
+		  "<!-- 3 -->@@include('html${3:номер-папки}',{})",
+		  "<!-- 4 -->@@include('html${4:номер-папки}',{})",
+		  "<!-- 5 -->@@include('html${5:номер-папки}',{})",
+		  "<!-- 6 -->@@include('html${6:номер-папки}',{})",
+		  "<!-- 7 -->@@include('html${7:номер-папки}',{})",
+		  "<!-- 8 -->@@include('html${8:номер-папки}',{})",
+		  "<!-- 9 -->@@include('html${9:номер-папки}',{})",
+		  "<!-- 10-->@@include('html${10:номер-папки}',{})",
+		  "<!--</Вставка helper> — Блок ЗАКРЫТ:↑———————————————————————————————↑-->"
+		]
+	 }
+	//===================================================
+	"Rating": {
+		"scope": "html",
+		"prefix": "rating",
+		"body": [
+			"<div class=\"rating rating_set\">\n\t<div class=\"rating__body\">\n\t\t<div class=\"rating__active\"></div>\n\t\t<div class=\"rating__items\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"1\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"2\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"3\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"4\" name=\"rating\">\n\t\t\t<input type=\"radio\" class=\"rating__item\" value=\"5\" name=\"rating\">\n\t\t</div>\n\t</div>\n\t<div class=\"rating__value\">3.6</div>\n</div>"
+		],
+		"description": "Додає базовий HTML код рейтингу"
+	},
+	//================================================
+	"Spollers": {
+		"scope": "html",
+		"prefix": "spollers",
+		"body": [
+			"<div data-spollers class=\"spollers\">\n\t<details class=\"spollers__item\">\n\t\t<summary class=\"spollers__title\">Заголовок спойлера</summary>\n\t\t<div class=\"spollers__body\">Контент спойлера</div>\n\t</details>\n</div>"
+		],
+		"description": "Додає базовий HTML код спойлерів"
+	},
+	//================================================
+	"BeforeAfter": {
+		"scope": "html",
+		"prefix": "ba",
+		"body": [
+			"<div data-ba class=\"${1:before-after}\">",
+			"\t<div data-ba-before class=\"${1:before-after}__item\">",
+			"\t</div>",
+			"\t<div data-ba-after class=\"${1:before-after}__item\">",
+			"\t</div>",
+			"\t<div data-ba-arrow class=\"${1:before-after}__arrow\"></div>",
+			"</div>"
+		],
+		"description": "Before After module"
+	},
+	//================================================
+	"Tabs": {
+		"scope": "html",
+		"prefix": "tabs",
+		"body": [
+			"<div data-tabs class=\"${1:tabs}\">\n\t<nav data-tabs-titles class=\"${1:tabs}__navigation\">\n\t\t<button type=\"button\" class=\"${1:tabs}__title _tab-active\">Таб №1</button>\n\t\t<button type=\"button\" class=\"${1:tabs}__title\">Таб №2</button>\n\t\t<button type=\"button\" class=\"${1:tabs}__title\">Таб №3</button>\n\t</nav>\n\t<div data-tabs-body class=\"${1:tabs}__content\">\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\tВміст першого таба\n\t\t</div>\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\tВміст другого таба\n\t\t</div>\n\t\t<div class=\"${1:tabs}__body\">\n\t\t\tВміст третього таба\n\t\t</div>\n\t</div>\n</div>"
+		],
+		"description": "Додає базовий HTML код табів"
+	},
+	//================================================
+	"Show More": {
+		"scope": "html",
+		"prefix": "showmore",
+		"body": [
+			"<div data-showmore class=\"${1:block}\">\n\t<div data-showmore-content class=\"${1:block}__content\"></div>\n\t<button hidden data-showmore-button type=\"button\" class=\"${1:block}__more\"><span>Показати ще</span><span>Сховати</span></button>\n</div>"
+		],
+		"description": "Додає базовий HTML код блоку 'показати ще'"
+	},
+	//================================================
+	"Swiper": {
+		"scope": "html",
+		"prefix": "swiper",
+		"body": [
+			"<div class=\"${1:имя-блока}__slider swiper\">\n\t<div class=\"${1:ім'я-блоку}__wrapper swiper-wrapper\">\n\t\t<div class=\"${1:ім'я-блоку}__slide swiper-slide\"></div>\n\t</div>\n</div>"
+		],
+		"description": "Додає базовий HTML-код слайдера Swiper"
+	},
+	//================================================
+	"Swiper Full": {
+		"scope": "html",
+		"prefix": "swiperfull",
+		"body": [
+			"<!-- Оболонка слайдера -->\n<div class=\"${1:ім'я-блоку}__slider swiper\">\n\t<!-- Частина слайдера, що рухається -->\n\t<div class=\"${1:ім'я-блоку}__wrapper swiper-wrapper\">\n\t\t<!-- Слайд -->\n\t\t<div class=\"${1:ім'я-блоку}__slide swiper-slide\"></div>\n\t</div>\n\t<!-- Якщо потрібна пагінація -->\n\t<div class=\"swiper-pagination\"></div>\n\t<!-- Якщо потрібна навігація (ліворуч/праворуч) -->\n\t<button type=\"button\" class=\"swiper-button-prev\"></button>\n\t<button type=\"button\" class=\"swiper-button-next\"></button>\n\t<!-- Якщо потрібен скролбар -->\n\t<div class=\"swiper-scrollbar\"></div>\n</div>"
+		],
+		"description": "Додає базовий HTML-код слайдера Swiper"
+	},
+	//================================================
+	"Quantity": {
+		"scope": "html",
+		"prefix": "quantity",
+		"body": "<div data-quantity class=\"quantity\">\n\t<button data-quantity-minus type=\"button\" class=\"quantity__button quantity__button--minus\"></button>\n\t<div class=\"quantity__input\">\n\t\t<input data-quantity-value autocomplete=\"off\" type=\"text\" name=\"form[]\" value=\"1\">\n\t</div>\n\t<button data-quantity-plus type=\"button\" class=\"quantity__button quantity__button--plus\"></button>\n</div>",
+		"description": "Додає HTML форми з кількістю"
+	},
+	//================================================
+
+	"FullPage": {
+		"scope": "html",
+		"prefix": "fullpage",
+		"body": "<div data-fp class=\"${1:ім'я-блоку}\">\n\t<div data-fp-section class=\"${1:ім'я-блоку}__section\"></div>\n</div>",
+		"description": "Додає структуру екранного прокручування сторінки"
+	},
+	//================================================
+	"Add tooltip": {
+		"scope": "html",
+		"prefix": "tip",
+		"body": [
+			"data-tippy-content=\"Підказка\""
+		],
+		"description": "Додає текст-підказку (Tippy)"
+	},
+	//================================================
+	"Add data-required": {
+		"scope": "html",
+		"prefix": "req",
+		"body": [
+			"data-required"
+		],
+		"description": "Додає атрибут до поля форми"
+	},
+	//================================================
+	"Add dynamic adapt": {
+		"scope": "html",
+		"prefix": "da",
+		"body": [
+			"data-da=\".${1:ім'я блоку}, 768\""
+		],
+		"description": "Додає атрибут динамічного адаптиву"
+	},
+	//================================================
+	"Add image IBG": {
+		"scope": "html",
+		"prefix": "ibg",
+		"body": [
+			"<img class=\"${1:ім'я блоку}__image ibg\" src=\"@img$2\" alt=\"Image\">"
+		],
+		"description": "Додає об'єкт з картинкою та класом IBG"
+	},
+	//================================================
+	"Add Link with image IBG": {
+		"scope": "html",
+		"prefix": "ibga",
+		"body": [
+			"<a href=\"#\" class=\"${1:ім'я блоку}__link\" ><img class=\"${1:ім'я блоку}__image ibg\" src=\"@img$2\" alt=\"Image\"></a>"
+		],
+		"description": "Додає посилання з картинкою та класом IBG"
+	},
+	//================================================
+	"Add input tag": {
+		"scope": "html",
+		"prefix": "inp",
+		"body": "<input autocomplete=\"off\" type=\"text\" name=\"form[]\" data-error=\"Помилка\" placeholder=\"\" class=\"input\">",
+		"description": "Додає input з налаштуваннями"
+	},
+	//================================================
+	"Add container": {
+		"scope": "html",
+		"prefix": "cnt",
+		"body": "<div class=\"${1:name}__container\">\n\t$2\n</div>",
+		"description": "Додає обмежуючий контейнер"
+	},
+	//================================================
+	"Form Email": {
+		"scope": "html",
+		"prefix": "formemail",
+		"body": "<form action=\"files/sendmail/sendmail.php\" method=\"POST\">\n\t<input type=\"text\" name=\"form[email]\" data-error=\"Error\" placeholder=\"E-mail\" class=\"input\">\n\t<button type=\"submit\" class=\"button\">Send</button>\n</form>",
+		"description": "Максимальная ширина"
+	},
+//================================================
+	"Add data-popup": {
+		"scope": "html",
+		"prefix": "pl",
+		"body": [
+			"data-popup=\"$1\""
+		],
+		"description": "Додає атрибут для відкриття попапа"
+	},
+//================================================
+	"Add Preloader": {
+		"scope": "html, htm",
+		"prefix": "prl",
+		"body": [
+			"@@include('html/_preloader.htm',{})"
+		],
+		"description": "Додає підключення прелоадеру"
+	},
+	//================================================
+	"Add popup": {
+		"scope": "html, htm",
+		"prefix": "pop",
+		"body": [
+			"@@include('html/_popup.htm',{})"
+		],
+		"description": "Додає HTML попапу"
+	},
+	//================================================
+	"Use SVG": {
+		"scope": "html, htm",
+		"prefix": "usvg",
+		"body": [
+			"<svg>",
+			"\t<use xlink:href=\"@img/icons/icons.svg#${1:назва іконки}\"></use>",
+			"</svg>"
+		],
+		"description": "use svg"
+	}
+//================================================
+	"qa": {
+		"scope": "html,kit, htm",
+		"prefix": "qa",
+		"body": "<div class=\"quantity\"><div class=\"quantity__button quantity__button_plus _icon-plus\"></div><div class=\"quantity__input\"><input autocomplete=\"off\" type=\"text\" name=\"form[]\" value=\"1\"></div><div class=\"quantity__button quantity__button_minus _icon-minus\"></div></div>",
+		"description": "qa"
+	},
+	//================================================
+	"Textarea": {
+		"scope": "html,kit",
+		"prefix": "txta",
+		"body": "<textarea autocomplete=\"off\" name=\"form[]\" placeholder=\"$1\" data-error=\"Помилка\" class=\"input\"></textarea>",
+		"description": "txta"
+	},
+	//================================================
+	"Select": {
+		"scope": "html,kit, htm",
+		"prefix": "sel",
+		"body": "<select name=\"form[]\" data-class-modif=\"form\">\n\t<option value=\"1\" selected>Пункт №1</option>\n\t<option value=\"2\">Пункт №2</option>\n\t<option value=\"3\">Пункт №3</option>\n\t<option value=\"4\">Пункт №4</option>\n</select>",
+		"description": "sel"
+	},
+	//================================================
+	"Radio buttons": {
+		"scope": "html,kit, htm",
+		"prefix": "opt",
+		"body": "<div class=\"options\">\n\t<div class=\"options__item\">\n\t\t<input id=\"o_1\" class=\"options__input\" checked type=\"radio\" value=\"1\" name=\"option\">\n\t\t<label for=\"o_1\" class=\"options__label\"><span class=\"options__text\">${1:Текст}</span></label>\n\t</div>\n\t<div class=\"options__item\">\n\t\t<input id=\"o_2\" class=\"options__input\" type=\"radio\" value=\"2\" name=\"option\">\n\t\t<label for=\"o_2\" class=\"options__label\"><span class=\"options__text\">${2:Текст}</span></label>\n\t</div>\n</div>",
+		"description": ""
+	},
+	//================================================
+	"CheckBox": {
+		"scope": "html,kit, htm",
+		"prefix": "chk",
+		"body": "<div class=\"checkbox\">\n\t<input id=\"c_1\" data-error=\"Помилка\" class=\"checkbox__input\" type=\"checkbox\" value=\"1\" name=\"form[]\">\n\t<label for=\"c_1\" class=\"checkbox__label\"><span class=\"checkbox__text\">${1:Текст}</span></label>\n</div>",
+		"description": ""
+	},
+	//================================================
+	"Button": {
+		"scope": "html,kit, htm",
+		"prefix": "btn",
+		"body": "<button type=\"submit\" class=\"button\">${1:Надіслати}</button>",
+		"description": ""
+	},
+	//================================================
+	"Button Item": {
+		"scope": "html,kit, htm",
+		"prefix": "bbtn",
+		"body": "<button type=\"button\" class=\"${1:class}\">${2:Текст}</button>",
+		"description": ""
+	},
+	//================================================
+	"Button Link": {
+		"scope": "html,kit, htm",
+		"prefix": "abtn",
+		"body": "<a href=\"\" class=\"button\">${1:Текст}</a>",
+		"description": ""
+	},
+	//================================================
+	"str": {
+		"scope": "html,kit, htm",
+		"prefix": "str",
+		"body": "<div class=\"${1:block}\">\n\t<div class='${1:block}__container'>\n\t\t<div class=\"${1:block}__title\"></div>\n\t\t<div class=\"${1:block}__row\">\n\t\t\t<div class=\"${1:block}__column\">\n\t\t\t\t$2\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>",
+		"description": "str"
+	},
+	//================================================
+	"menu": {
+		"scope": "html,kit, htm",
+		"prefix": "menu",
+		"body": "<a href=\"\" class=\"header__logo\"><img src=\"@img/logo.svg\" alt=\"\"></a>\n\t<div class=\"header__menu menu\">\n\t<button type=\"button\" class=\"menu__icon icon-menu\"><span></span></button>\n\t<nav class=\"menu__body\">\n\t\t<ul class=\"menu__list\">\n\t\t\t<li class=\"menu__item\"><a href=\"\" class=\"menu__link\"></a></li>\n\t\t</ul>\n\t</nav>\n</div>",
+		"description": "menu"
+	},
+	//================================================
+	"logo": {
+		"scope": "html,kit, htm",
+		"prefix": "logo",
+		"body": "<a href=\"\" class=\"header__logo\"><img src=\"@img/logo.svg\" alt=\"\"></a>",
+		"description": "logo"
+	},
+	//================================================
+	"Image @img": {
+		"scope": "html,kit, htm",
+		"prefix": "img",
+		"body": "<img src=\"@img$0\" alt=\"Image\">",
+		"description": "img"
+	},
+	//================================================
+	"Image": {
+		"scope": "html,kit, htm",
+		"prefix": "im",
+		"body": "<img src=\"img$0\" alt=\"Image\">",
+		"description": "img"
+	},
+	//================================================
+	"Image Lazy": {
+		"scope": "html,kit, htm",
+		"prefix": "imgl",
+		"body": "<img data-src=\"@img$0\" alt=\"Image\">",
+		"description": "img lazy load"
+	},
+//================================================
+	"Link": {
+		
+		"scope": "html,js",
+		"prefix": "a",
+		"body": [
+			"<a href=\"$1\">$2</a>"
+		],
+		"description": "Параграф тексту"
+	},
+	//================================================
+	"Pharagraph": {
+		"scope": "html,js",
+		"prefix": "p",
+		"body": [
+			"<p>$1</p>"
+		],
+		"description": "Параграф тексту"
+	},
+	//================================================
+	"ac_html": {
+		"scope": "html,kit,javascript",
+		"prefix": "ac",
+		"body": [
+			"_active"
+		],
+		"description": "ac_html"
+	},
+	//================================================
+	"lines": {
+		"scope": "javascript",
+		"prefix": "hr",
+		"body": [
+			"//==============================================="
+		],
+		"description": "hr line"
+	},
+}

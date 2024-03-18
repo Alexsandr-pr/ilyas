@@ -1,0 +1,178 @@
+{
+	// Place your GLOBAL snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"fbpp": {
+		"scope": "scss",
+		"prefix": "fbpp",
+		"body": [
+			"flex: 0 0 percent($1, $2);"
+		],
+		"description": "fbpp"
+	},
+	//================================================
+	"fb": {
+		"prefix": "fb",
+		"body": [
+			"display: flex;"
+		],
+		"description": "fb"
+	},
+	//================================================
+	"fbi": {
+		"prefix": "fbi",
+		"body": [
+			"display: inline-flex;"
+		],
+		"description": "fbi"
+	},
+	//================================================
+	
+	"fbo": {
+		"prefix": "fbo",
+		"body": [
+			"order:${1:1};"
+		],
+		"description": "fbo"
+	},
+	//================================================
+	"fbs": {
+		"prefix": "fbs",
+		"body": [
+			"justify-content:${1:space-between};"
+		],
+		"description": "fbs"
+	},
+	//================================================
+	"fbai": {
+		"prefix": "fbai",
+		"body": [
+			"align-items:${1:center};"
+		],
+		"description": "fbai"
+	},
+	//================================================
+	"fbw": {
+		"prefix": "fbw",
+		"body": [
+			"flex-wrap: wrap;"
+		],
+		"description": "fbw"
+	},
+	//================================================
+	"fbd": {
+		"prefix": "fbd",
+		"body": [
+			"flex-direction: column;"
+		],
+		"description": "fbd"
+	},
+	//================================================
+	"fbg": {
+		"prefix": "fbg",
+		"body": [
+			"flex: 1 1 100%;"
+		],
+		"description": "fbg"
+	},
+	//================================================
+	"fbga": {
+		"prefix": "fbga",
+		"body": [
+			"flex: 1 1 auto;"
+		],
+		"description": "fbga"
+	},
+	//================================================
+	"fbgh": {
+		"prefix": "fbgh",
+		"body": [
+			"flex: 0 1 50%;"
+		],
+		"description": "fbgh"
+	},
+	//================================================
+	"fbgt": {
+		"prefix": "fbgt",
+		"body": [
+			"flex: 0 1 33.333%;"
+		],
+		"description": "fbgt"
+	},
+	//================================================
+	"fbgq": {
+		"prefix": "fbgq",
+		"body": [
+			"flex: 0 1 25%;"
+		],
+		"description": "fbgq"
+	},
+	//================================================
+	"fbp": {
+		"scope": "scss",
+		"prefix": "fbp",
+		"body": [
+			"flex: 0 0 toRem($1);"
+		],
+		"description": "fbp"
+	},
+	//================================================
+	"fbp CSS": {
+		"scope": "css",
+		"prefix": "fbp",
+		"body": [
+			"flex: 0 0 $1px;"
+		],
+		"description": "fbp"
+	},
+	//================================================
+	"fbc": {
+		"prefix": "fbc",
+		"body": [
+			"justify-content:center;align-items: center;"
+		],
+		"description": "fbc"
+	},
+	//================================================
+	"Gap": {
+		"scope": "scss",
+		"prefix": "g",
+		"body": "gap: toRem($1);",
+		"description": "Gap"
+	},
+	//================================================
+	"Column Gap": {
+		"scope": "scss",
+		"prefix": "cg",
+		"body": "column-gap: toRem($1);",
+		"description": "Column Gap"
+	},
+	//================================================
+	"Row Gap": {
+		"scope": "scss",
+		"prefix": "rg",
+		"body": "row-gap: toRem($1);",
+		"description": "Row Gap"
+	},
+	//================================================
+	"Align items center": {
+		"scope": "scss,css",
+		"prefix": "aic",
+		"body": "align-items: center;",
+		"description": "Align items center"
+	},
+	//================================================
+}

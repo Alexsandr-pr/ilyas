@@ -1,0 +1,720 @@
+{
+	// Place your GLOBAL snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"Секция для COMMON": {
+		"scope": "scss",
+		"prefix": "sc+",
+		"description": "Внутри файла common > page вставляем название секций",
+		"body": [
+		  "// .page$1",
+		  "&$1 {",
+		  "}"
+		]
+	 },
+
+	//=========================================================
+
+	"импорт стилей": {
+		"scope": "scss",
+		"prefix": "imp+",
+		"description": "Подключение импорта всех стилей секций",
+		"body": [
+		  "/* 1 */",
+		  "@import \"${1:номер-папки}_style-${2:имя-папки}$3\";",
+		  "/* 2 */",
+		  "@import \"${1:номер-папки}_style-${2:имя-папки}$4\";",
+		  "/* 3 */",
+		  "@import \"${1:номер-папки}_style-${2:имя-папки}$5\";",
+		  "/* 4 */",
+		  "@import \"${1:номер-папки}_style-${2:имя-папки}$6\";",
+		  "/* 5 */",
+		  "@import \"${1:номер-папки}_style-${2:имя-папки}$7\";",
+		  "/* 6 */",
+		  "@import \"${1:номер-папки}_style-${2:имя-папки}$8\";",
+		  "/* 7 */",
+		  "@import \"${1:номер-папки}_style-${2:имя-папки}$9\";",
+		  "/* 8 */",
+		  "@import \"${1:номер-папки}_style-${2:имя-папки}$10\";",
+		  "/* 9 */",
+		  "@import \"${1:номер-папки}_style-${2:имя-папки}$11\";",
+		  "/* 10 */",
+		  "@import \"${1:номер-папки}_style-${2:имя-папки}$12\";",
+		]
+	 },
+
+	//Eдиницы измерения===============================
+	"EM": {
+		"scope": "scss",
+		"prefix": "em",
+		"body": [
+			"toEm($1,$2)"
+		],
+		"description": "Виклик міксину переведення в EM"
+	},
+	//================================================
+	"REM": {
+		"scope": "scss",
+		"prefix": "r",
+		"body": [
+			"toRem($1)"
+		],
+		"description": "Виклик міксину переведення в REM"
+	},
+	//================================================
+	"Percent": {
+		"scope": "scss",
+		"prefix": "prc",
+		"body": [
+			"percent($1,$2)"
+		],
+		"description": "Виклик міксину переведення в %"
+	},
+	//================================================
+	"Percent padding": {
+		"scope": "scss",
+		"prefix": "pbp",
+		"body": [
+			"padding-bottom: percent($1,$2);"
+		],
+		"description": "Відступ вниз із зазначенням %"
+	},
+	//Прочие==========================================
+	"Font Size in REM": {
+		"scope": "scss",
+		"prefix": "fz",
+		"body": [
+			"font-size: toRem($1);"
+		],
+		"description": "Переводит PX в REM"
+	},
+	//================================================
+	"Divade": {
+		"scope": "scss",
+		"prefix": "di",
+		"body": [
+			"math.div($1,$2)"
+		],
+		"description": "Ділення чисел"
+	},
+	//================================================
+	"Width with REM": {
+		"scope": "scss",
+		"prefix": "w",
+		"body": "width: toRem($1);",
+		"description": "Додає width з переведенням у REM"
+	},
+	//================================================
+	"Height with REM": {
+		"scope": "scss",
+		"prefix": "h",
+		"body": "height: toRem($1);",
+		"description": "Додає height з переведенням у REM"
+	},
+	//Отступы=========================================
+	"Margin top with REM": {
+		"scope": "scss",
+		"prefix": "mt",
+		"body": "margin-top: toRem($1);",
+		"description": "Додає верхній відступ з переведенням у REM"
+	},
+	//================================================
+	"Margin bottom with REM": {
+		"scope": "scss",
+		"prefix": "mb",
+		"body": "margin-bottom: toRem($1);",
+		"description": "Додає нижній відступ з переведенням у REM"
+	},
+	//================================================
+	"Margin bottom with EM": {
+		"scope": "scss",
+		"prefix": "mbe",
+		"body": "margin-bottom: toEm($1, $2);",
+		"description": "Додає нижній відступ з переведенням у EM"
+	},
+	//================================================
+	"Margin Bottom not last-child": {
+		"scope": "scss",
+		"prefix": "mbl",
+		"body": [
+			"&:not(:last-child) {margin-bottom: toRem($1);}"
+		],
+		"description": "Додає нижній відступ, виключаючи останній об'єкт"
+	},
+	//================================================
+	"Margin Bottom not last-child with EM": {
+		"scope": "scss",
+		"prefix": "mble",
+		"body": [
+			"&:not(:last-child) {margin-bottom: toEm($1, $2);}"
+		],
+		"description": "Додає нижній відступ за винятком останнього об'єкту з переведенням у EM"
+	},
+	//================================================
+	"Not last-child": {
+		"scope": "scss",
+		"prefix": "nlc",
+		"body": [
+			"&:not(:last-child) {\n\t$1\n}"
+		],
+		"description": "Виключаючи останній об'єкт"
+	},
+	//================================================
+	"Margin REM": {
+		"scope": "scss",
+		"prefix": "mm",
+		"body": [
+			"margin: toRem(0) toRem(0) toRem(0) toRem(0);"
+		],
+		"description": "margin"
+	},
+	//================================================
+	"Margin": {
+		"scope": "css",
+		"prefix": "mm",
+		"body": [
+			"margin: 0px 0px 0px 0px;"
+		],
+		"description": "margin"
+	},
+	//================================================
+	"Margin to right": {
+		"scope": "scss,css",
+		"prefix": "mr",
+		"body": [
+			"margin: 0 0 0 auto;"
+		],
+		"description": "margin"
+	},
+	//================================================
+	"Margin left and right REM": {
+		"scope": "scss",
+		"prefix": "mmm",
+		"body": [
+			"margin: 0 toRem($1);"
+		],
+		"description": "margin left and right"
+	},
+	//================================================
+	"Margin left and right": {
+		"scope": "css",
+		"prefix": "mmm",
+		"body": [
+			"margin: 0 $1px;"
+		],
+		"description": "margin left and right"
+	},
+	//================================================
+	"Margin 0 auto": {
+		"scope": "scss,css",
+		"prefix": "mu",
+		"body": [
+			"margin: 0 auto;"
+		],
+		"description": "margin center"
+	},
+	//================================================
+	"mc": {
+		"scope": "scss,css",
+		"prefix": "mc",
+		"body": [
+			"margin:auto;"
+		],
+		"description": "margin center"
+	},
+	
+	//================================================
+
+	"Opacity": {
+		"scope": "scss,css",
+		"prefix": "op",
+		"body": "opacity: ${1:0};",
+		"description": "Додає відносний opacity"
+	},
+	//================================================
+	"Line height": {
+		"scope": "scss",
+		"prefix": "lh",
+		"body": "line-height: $1;",
+		"description": "Додає відносний line-height"
+	},
+	//================================================
+	"Line height Divide": {
+		"scope": "scss",
+		"prefix": "lhd",
+		"body": "line-height: math.div($1 , $2);",
+		"description": "Додає відносний line-height"
+	},
+	
+	//================================================
+	"Max width": {
+		"scope": "scss",
+		"prefix": "mw",
+		"body": "max-width: toRem($1);",
+		"description": "Максимальна ширина"
+	},
+
+	//================================================
+	"Padding REM": {
+		"scope": "scss",
+		"prefix": "pp",
+		"body": [
+			"padding: toRem(0) toRem(0) toRem(0) toRem(0);"
+		],
+		"description": "padding"
+	},
+	//================================================
+	"Padding": {
+		"scope": "css",
+		"prefix": "pp",
+		"body": [
+			"padding: 0px 0px 0px 0px;"
+		],
+		"description": "padding"
+	},
+	//================================================
+	"Padding left and right REM": {
+		"scope": "scss",
+		"prefix": "ppp",
+		"body": [
+			"padding: 0 toRem($1);"
+		],
+		"description": "Padding left and right"
+	},
+	//================================================
+	"Padding left and right": {
+		"scope": "css",
+		"prefix": "ppp",
+		"body": [
+			"padding: 0 $1px;"
+		],
+		"description": "Padding left and right"
+	},
+	//================================================
+	"Padding top REM": {
+		"scope": "scss",
+		"prefix": "pt",
+		"body": [
+			"padding-top: toRem($1);"
+		],
+		"description": "padding top"
+	},
+	//================================================
+	"Padding top": {
+		"scope": "css",
+		"prefix": "pt",
+		"body": [
+			"padding-top: $1px;"
+		],
+		"description": "padding top"
+	},
+	//================================================
+	"Padding bottom REM": {
+		"scope": "scss",
+		"prefix": "pb",
+		"body": [
+			"padding-bottom: toRem($1);"
+		],
+		"description": "padding bottom"
+	},
+	//================================================
+	"Padding bottom": {
+		"scope": "css",
+		"prefix": "pb",
+		"body": [
+			"padding-bottom: $1px;"
+		],
+		"description": "padding bottom"
+	},
+	//================================================
+	"Padding left REM": {
+		"scope": "scss",
+		"prefix": "pl",
+		"body": [
+			"padding-left: toRem($1);"
+		],
+		"description": "padding left"
+	},
+	//================================================
+	"Padding left": {
+		"scope": "css",
+		"prefix": "pl",
+		"body": [
+			"padding-left: $1px;"
+		],
+		"description": "padding left"
+	},
+	//================================================
+	"Padding right REM": {
+		"scope": "scss",
+		"prefix": "pr",
+		"body": [
+			"padding-right: toRem($1);"
+		],
+		"description": "padding right"
+	},
+	//================================================
+	"Padding right": {
+		"scope": "css",
+		"prefix": "pr",
+		"body": [
+			"padding-right: $1px;"
+		],
+		"description": "padding right"
+	},
+	//================================================
+	"mwn": {
+		"scope": "scss,css",
+		"prefix": "mwn",
+		"body": [
+			"max-width: none;"
+		],
+		"description": "max-width none"
+	},
+	//================================================
+	
+	
+	"drt": {
+		"scope": "scss,css",
+		"prefix": "drt",
+		"body": [
+			"direction: rtl;"
+		],
+		"description": "drt"
+	},
+	//================================================
+	"br5": {
+		"scope": "css,scss",
+		"prefix": "br5",
+		"body": [
+			"border-radius: 50%;"
+		],
+		"description": "br5"
+	},
+	//================================================
+	"bs": {
+		"scope": "scss,css",
+		"prefix": "bs",
+		"body": [
+			"box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);"
+		],
+		"description": "bs"
+	},
+	//================================================
+	"wa": {
+		"scope": "scss,css",
+		"prefix": "wa",
+		"body": [
+			"width: auto;"
+		],
+		"description": "wa"
+	},
+	//================================================
+	"ha": {
+		"scope": "scss,css",
+		"prefix": "ha",
+		"body": [
+			"height: auto;"
+		],
+		"description": "ha"
+	},
+	//================================================
+	
+	
+	"an": {
+		"scope": "scss,css",
+		"prefix": "an",
+		"body": [
+			"animation:${1:name} 1s infinite linear;"
+		],
+		"description": "aa"
+	},
+	//================================================
+	"Transition": {
+		"scope": "scss,css",
+		"prefix": "aa",
+		"body": [
+			"transition: all 0.${1:3}s;$2"
+		],
+		"description": "aa"
+	},
+	//================================================
+	"ar": {
+		"scope": "scss,css",
+		"prefix": "ar",
+		"body": [
+			"transform: rotate(-${1:180}deg);"
+		],
+		"description": "ar"
+	},
+	//================================================
+	"as": {
+		"scope": "scss,css",
+		"prefix": "as",
+		"body": [
+			"transform: scale(${1:1});"
+		],
+		"description": "as"
+	},
+	//================================================
+	"at": {
+		"scope": "scss,css",
+		"prefix": "at",
+		"body": [
+			"transform: translate(${1:0}px,${2:0}px);$3"
+		],
+		"description": "at"
+	},
+	//================================================
+	"att": {
+		"scope": "scss,css",
+		"prefix": "att",
+		"body": [
+			"transform: translate(0px,0px) rotate(0deg) scale(1) skew(0,0);"
+		],
+		"description": "at"
+	},
+	//================================================
+	"ex": {
+		"scope": "scss,css",
+		"prefix": "ex",
+		"body": [
+			"@extend %${1:};"
+		],
+		"description": "ex"
+	},
+	//================================================
+	"ic": {
+		"scope": "scss,css",
+		"prefix": "ic",
+		"body": [
+			"@extend %ic;"
+		],
+		"description": "ic"
+	},
+	//================================================
+	"is": {
+		"scope": "scss,css",
+		"prefix": "is",
+		"body": [
+			"img{max-width: 100%;}"
+		],
+		"description": "is"
+	},
+	//================================================
+	"lc": {
+		"scope": "scss,css",
+		"prefix": "lc",
+		"body": [
+			"&:last-child{\n\t$0\n}"
+		],
+		"description": "lc"
+	},
+	//================================================
+	"fc": {
+		"scope": "scss,css",
+		"prefix": "fc",
+		"body": [
+			"&:first-child{\n\t$0\n}"
+		],
+		"description": "fc"
+	},
+	//================================================
+	"nc": {
+		"scope": "scss",
+		"prefix": "nc",
+		"body": [
+			"&:nth-child($0){}"
+		],
+		"description": "nc"
+	},
+	//================================================
+	"Before After": {
+		"scope": "scss",
+		"prefix": "ba",
+		"body": [
+			"&::before,&::after{\n\tcontent:'';\n\t$0\n}"
+		],
+		"description": "ba"
+	},
+	//================================================
+	"Before": {
+		"scope": "scss",
+		"prefix": "b",
+		"body": [
+			"&::before{\n\tcontent:'';\n\t$0\n}"
+		],
+		"description": "before"
+	},
+	//================================================
+	"After": {
+		"scope": "scss",
+		"prefix": "a",
+		"body": [
+			"&::after{\n\tcontent:'';\n\t$0\n}"
+		],
+		"description": "after"
+	},
+	//================================================
+	"Text Align Center": {
+		"scope": "scss,css",
+		"prefix": "tac",
+		"body": [
+			"text-align: center;"
+		],
+		"description": "text-align: center;"
+	},
+	//================================================
+	"hv": {
+		"scope": "scss,css",
+		"prefix": "hv",
+		"body": [
+			"&:hover{\n\t$0\n}"
+		],
+		"description": "hv"
+	},
+	//================================================
+	"hhv": {
+		"scope": "scss,css",
+		"prefix": "hhv",
+		"body": [
+			"@media (any-hover: hover){\n\t&:hover{\n\t\t$0\n\t}\n}"
+		],
+		"description": "hhv"
+	},
+	//================================================
+	"acc": {
+		"scope": "scss,css",
+		"prefix": "acc",
+		"body": [
+			"&:active{\n\t$0\n}"
+		],
+		"description": "acc"
+	},
+	//================================================
+	"ac_css": {
+		"scope": "scss,css",
+		"prefix": "ac",
+		"body": [
+			"&._active{\n\t$0\n}"
+		],
+		"description": "ac_css"
+	},
+	//================================================
+	"bg+ @img": {
+		"scope": "scss",
+		"prefix": "bg+",
+		"body": [
+			"background: url('@img$0') 0 0 no-repeat;"
+		],
+		"description": "bg+"
+	},
+	//================================================
+	"bg+": {
+		"scope": "css",
+		"prefix": "bg+",
+		"body": [
+			"background: url('../img$0') 0 0 no-repeat;"
+		],
+		"description": "bg+"
+	},
+	//!================================================
+	
+	//?================================================
+	"lcm": {
+		"scope": "scss,css",
+		"prefix": "lcm",
+		"body": [
+			"&:last-child{margin:0px 0px 0px 0px;}"
+		],
+		"description": "lcm"
+	},
+	//================================================
+	"hvu": {
+		"scope": "scss,css",
+		"prefix": "hvu",
+		"body": [
+			"&:hover{text-decoration: underline;}"
+		],
+		"description": "hvu"
+	},
+	//================================================
+	"hvn": {
+		"scope": "scss,css",
+		"prefix": "hvn",
+		"body": [
+			"&:hover{text-decoration: none;}"
+		],
+		"description": "hvn"
+	},
+	//================================================
+	"bt": {
+		"scope": "scss,css",
+		"prefix": "bt",
+		"body": [
+			"body.touch &{\n\t$1\n}"
+		],
+		"description": "bt"
+	},
+	//================================================
+	"kf": {
+		"scope": "scss,css",
+		"prefix": "kf",
+		"body": "@keyframes ${1:name} {\n\t0% {\n\t\t$2\n\t}\n\t100% {\n\t\t$3\n\t}\n}",
+		"description": "kf"
+	},
+	//================================================
+	"nowrap": {
+		"scope": "scss,css",
+		"prefix": "wsnw",
+		"body": "white-space: nowrap;",
+		"description": "nowrap"
+	},
+	//ToDo================================================
+	"Margin bottom": {
+		"scope": "css",
+		"prefix": "mb",
+		"body": "margin-bottom: $1px;",
+		"description": "Додає нижній відступ з переведенням у REM"
+	},
+	//================================================
+	"Margin top": {
+		"scope": "css",
+		"prefix": "mt",
+		"body": "margin-top: $1px;",
+		"description": "Додає верхній відступ з переведенням у REM"
+	},
+	//================================================
+	"Padding CSS": {
+		"scope": "css",
+		"prefix": "pp",
+		"body": [
+			"padding: 0px 0px 0px 0px;"
+		],
+		"description": "padding"
+	},
+	//================================================
+	"Margin CSS": {
+		"scope": "css",
+		"prefix": "pp",
+		"body": [
+			"margin: 0px 0px 0px 0px;"
+		],
+		"description": "padding"
+	},
+	//================================================
+}
